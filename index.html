@@ -101,21 +101,34 @@
       .mobile-sticky{display:grid;grid-template-columns:1fr 1fr 1fr;position:fixed;bottom:0;left:0;right:0;background:#fff;padding:9px;gap:6px;z-index:40;border-top:1px solid var(--line)}
       .mobile-sticky a{text-align:center;padding:11px 6px;font-weight:700;font-size:.78rem}.mobile-sticky a:nth-child(1){background:var(--red);color:#fff}.mobile-sticky a:nth-child(2){background:var(--blue);color:#fff}.mobile-sticky a:nth-child(3){background:var(--linen);color:var(--brown)}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.reveal-item{opacity:1;transform:none;transition:none}.btn{transition:none}.hero-media{transform:none!important}.room img,.gallery figure img,.wellness-card img,.feature-media img{transition:none}}
+    .request{background:var(--white)}.request.alt{background:var(--linen)}
+    .request-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}.request-phone{display:inline-block;margin-top:22px;font:700 clamp(1.4rem,2.6vw,1.9rem) var(--serif);color:var(--red)}
+    .request-form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 14px;padding:34px;background:var(--cream);border:1px solid var(--line);border-radius:14px}.request.alt .request-form{background:#fff}
+    .field{display:grid;gap:6px;align-content:start;min-width:0;font-size:.78rem;font-weight:700}.field.full{grid-column:1/-1}.field small{font-weight:400;color:var(--muted)}
+    .field input,.field select,.field textarea{width:100%;min-width:0;min-height:50px;padding:11px 14px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--brown);font:400 1rem var(--sans)}.request.alt .field input,.request.alt .field textarea{background:var(--cream)}
+    .field textarea{min-height:110px;resize:vertical}.field [aria-invalid=true]{border-color:var(--red);border-width:2px}
+    [data-error-for]{font-weight:700;color:var(--red)}[data-error-for]:empty{display:none}.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+    .request-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px}.request-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}.request-note{flex:1;min-width:200px;margin:0;color:var(--muted);font-size:.8rem}
+    [data-status]{grid-column:1/-1;margin:0;padding:14px 16px;border-left:4px solid var(--olive);border-radius:6px;background:var(--linen);font-size:.92rem}.request.alt [data-status]{background:var(--cream)}[data-status]:empty{display:none}[data-status][data-state=error]{border-left-color:var(--red)}[data-status] a{font-weight:800;text-decoration:underline}
+    .wellness-card .btn{margin-top:16px}
+    @media(max-width:1020px){.request-grid{grid-template-columns:minmax(0,1fr);gap:32px}}@media(max-width:600px){.request-form{grid-template-columns:minmax(0,1fr);padding:22px 16px}}
   </style>
   <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Hotel","name":"Тарас Бульба","image":"https://tarasbulba.webart.work/images/hero.jpg","address":{"@type":"PostalAddress","streetAddress":"вул. Старобульварна, 6","addressLocality":"Кам’янець-Подільський","addressCountry":"UA"},"telephone":"+380673811554","url":"https://tarasbulba.webart.work/","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Free parking","value":true},{"@type":"LocationFeatureSpecification","name":"Sauna","value":true},{"@type":"LocationFeatureSpecification","name":"24-hour front desk","value":true},{"@type":"LocationFeatureSpecification","name":"Breakfast","value":true},{"@type":"LocationFeatureSpecification","name":"Restaurant","value":true},{"@type":"LocationFeatureSpecification","name":"Bar","value":true},{"@type":"LocationFeatureSpecification","name":"Live music (on request)","value":true}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"9.5","bestRating":"10","reviewCount":"1101"}},{"@context":"https://schema.org","@type":"Restaurant","name":"Тарас Бульба","servesCuisine":"Ukrainian","telephone":"+380673811554","address":{"@type":"PostalAddress","streetAddress":"вул. Старобульварна, 6","addressLocality":"Кам’янець-Подільський","addressCountry":"UA"},"url":"https://tarasbulba.webart.work/"}]</script>
 </head>
 <body>
   <a class="skip" href="#top">До основного вмісту</a>
-  <header><div class="wrap header-top"><a class="brand" href="#top"><strong>ТАРАС БУЛЬБА</strong><small>Готель · Ресторан · Кам’янець-Подільський</small></a></div><div class="wrap header-bottom"><nav id="nav" class="nav" aria-label="Основна навігація"><a href="#rooms">Номери</a><a href="#dine">Ресторан</a><a href="#wellness">SPA</a><a href="#music">Музика</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти</a><a class="btn primary" href="#booking">Забронювати</a><a class="phone" href="tel:+380673811554">+38 067 381 15 54</a></nav></div></header>
+  <header><div class="wrap header-top"><a class="brand" href="#top"><strong>ТАРАС БУЛЬБА</strong><small>Готель · Ресторан · Кам’янець-Подільський</small></a></div><div class="wrap header-bottom"><nav id="nav" class="nav" aria-label="Основна навігація"><a href="#rooms">Номери</a><a href="#dine">Ресторан</a><a href="#wellness">SPA</a><a href="#music">Музика</a><a href="#gallery">Галерея</a><a href="#contacts">Контакти</a><a class="btn primary" href="#stay-request">Забронювати</a><a class="phone" href="tel:+380673811554">+38 067 381 15 54</a></nav></div></header>
   <main id="top">
     <section class="hero"><div class="hero-media"><video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/hero.jpg"><source src="hero-bg.mp4" type="video/mp4"></video></div><div class="wrap hero-content"><span class="eyebrow">Готель · Ресторан · Українська гостинність</span><h1>Тарас Бульба</h1><h2>Зупиніться. Скуштуйте. Відпочиньте.</h2><p>Комфортні номери, українська кухня, SPA-зона та жива музика у Кам’янці-Подільському.</p><div class="rating-chip"><b>9.5</b><span>Booking.com · 1101 відгук</span></div><div class="actions"><a class="btn primary" href="#rooms">Переглянути номери</a><a class="btn" style="border-color:#fff;color:#fff" href="#dine">Ресторан</a></div><div class="hero-address"><span>вул. Старобульварна, 6</span><a href="https://maps.app.goo.gl/J9KLxGqkPsQFtcDe9" target="_blank" rel="noopener">Показати на карті →</a></div></div><span class="image-note">Ілюстративне зображення</span></section>
     <section class="facts"><div class="wrap facts-grid"><div class="fact"><b>Booking 9,5</b><span>1101 відгук</span></div><div class="fact"><b>Ресторан</b><span>Підтверджено</span></div><div class="fact"><b>Українська кухня</b><span>За джерелом</span></div><div class="fact"><b>Сніданок</b><span>Підтверджено</span></div><div class="fact"><b>Безкоштовний Wi-Fi</b><span>Підтверджено</span></div><div class="fact"><b>Безкоштовна парковка</b><span>Підтверджено</span></div><div class="fact"><b>Сауна</b><span>Підтверджено</span></div><div class="fact"><b>24/7</b><span>Рецепція</span></div></div></section>
     <section class="section" id="about"><div class="wrap about-grid"><div class="reveal"><span class="eyebrow">Про нас</span><h2>Більше, ніж готель</h2><p class="lead">«Тарас Бульба» поєднує проживання, ресторан української кухні, SPA-зону, сауну, бар, сніданок та живу музику. Гість може провести тут значно більше, ніж просто ніч.</p><a class="btn primary" href="#rooms">Відкрити «Тарас Бульба»</a></div><div class="about-list reveal"><div>Комфортні номери</div><div>Ресторан української кухні</div><div>SPA-зона та сауна</div><div>Бар</div><div>Сніданок</div><div>Жива музика під замовлення</div></div></div></section>
-    <section class="section rooms" id="rooms"><div class="wrap"><div class="rooms-head reveal"><div><span class="eyebrow">STAY</span><h2>Комфортні номери</h2></div><p>Точна кількість номерів і категорії наразі не підтверджені.</p></div><div class="room-grid reveal-group"><figure class="room reveal-item"><img src="images/room-a.jpg" alt="Приклад номера, ілюстративне зображення"><figcaption class="room-tag"><strong>Приклад номера</strong><small>Категорію та ціну уточнюйте</small></figcaption></figure><figure class="room reveal-item"><img src="images/room-b.jpg" alt="Приклад іншого номера, ілюстративне зображення"><figcaption class="room-tag"><strong>Інший формат</strong><small>Зручності уточнюйте</small></figcaption></figure></div><div class="rooms-note">Категорію, місткість, зручності номера та ціну, будь ласка, уточнюйте по телефону під час бронювання.</div></div></section>
+    <section class="section rooms" id="rooms"><div class="wrap"><div class="rooms-head reveal"><div><span class="eyebrow">STAY</span><h2>Комфортні номери</h2></div><p>Точна кількість номерів і категорії наразі не підтверджені.</p></div><div class="room-grid reveal-group"><figure class="room reveal-item"><img src="images/room-a.jpg" alt="Приклад номера, ілюстративне зображення"><figcaption class="room-tag"><strong>Приклад номера</strong><small>Категорію та ціну уточнюйте</small></figcaption></figure><figure class="room reveal-item"><img src="images/room-b.jpg" alt="Приклад іншого номера, ілюстративне зображення"><figcaption class="room-tag"><strong>Інший формат</strong><small>Зручності уточнюйте</small></figcaption></figure></div><div class="rooms-note">Категорію, місткість, зручності номера та ціну, будь ласка, уточнюйте по телефону під час бронювання або <a href="#stay-request" style="color:var(--red);font-weight:700;text-decoration:underline">залиште запит</a>.</div></div></section>
     <section class="feature breakfast" id="breakfast"><div class="feature-copy"><div class="reveal"><span class="eyebrow">MORNING</span><h2>Почніть день зі сніданку</h2><p class="lead">Для гостей підтверджений сніданок. Формат (шведський стіл чи сет-меню), години роботи та варіанти для дітей наразі не уточнені.</p><a class="btn primary" href="#booking">Уточнити сніданок</a></div></div><div class="feature-media reveal"><img src="images/breakfast.jpg" alt="Сніданок, ілюстративне зображення"></div></section>
     <section class="feature dine" id="dine"><div class="feature-media reveal"><img src="images/cuisine.jpg" alt="Українська кухня, ілюстративне зображення"></div><div class="feature-copy"><div class="reveal"><span class="eyebrow">DINE</span><h2>Українська кухня</h2><p class="lead">Джерельний опис підтверджує ресторан української кухні, один із головних елементів «Тарас Бульба», нарівні з номерами та SPA. Меню, фірмові страви, ціни та вегетаріанські опції наразі не підтверджені.</p><a class="btn gold" href="#booking">Забронювати столик</a><div class="bar-note"><strong>Бар</strong> також підтверджений, конкретний список напоїв чи коктейльна карта наразі не уточнені.</div></div></div></section>
     <section class="section music" id="music"><div class="wrap music-grid"><div class="reveal"><span class="eyebrow">EVENING</span><h2>Вечір із живою музикою</h2><p class="lead">У джерельному описі жива музика зазначена саме як послуга під замовлення, а не щовечора.</p><span class="music-badge">Жива музика · під замовлення</span></div><figure class="music-media reveal"><img src="images/music.jpg" alt="Жива музика, ілюстративне зображення"></figure></div></section>
-    <section class="section wellness" id="wellness"><div class="wrap"><span class="eyebrow">RELAX</span><h2>Час на відпочинок</h2><p class="lead">SPA-зона та сауна підтверджені окремо. Конкретне оснащення SPA (басейн, джакузі, хамам, масажні процедури) наразі не підтверджене.</p><div class="wellness-grid"><article class="wellness-card"><img src="images/spa.jpg" alt="SPA-зона, ілюстративне зображення"><div><h3>SPA-зона</h3><p>Формат і перелік процедур уточнюйте під час бронювання.</p></div></article><article class="wellness-card"><img src="images/sauna.jpg" alt="Сауна, ілюстративне зображення"><div><h3>Сауна</h3><p>Місткість, тривалість сеансу та вартість наразі не підтверджені.</p></div></article></div></div></section>
+    <section class="section wellness" id="wellness"><div class="wrap"><span class="eyebrow">RELAX</span><h2>Час на відпочинок</h2><p class="lead">SPA-зона та сауна підтверджені окремо. Конкретне оснащення SPA (басейн, джакузі, хамам, масажні процедури) наразі не підтверджене.</p><div class="wellness-grid"><article class="wellness-card"><img src="images/spa.jpg" alt="SPA-зона, ілюстративне зображення"><div><h3>SPA-зона</h3><p>Формат і перелік процедур уточнюйте під час бронювання.</p><a class="btn primary" href="#spa-request">Записатися в SPA</a></div></article><article class="wellness-card"><img src="images/sauna.jpg" alt="Сауна, ілюстративне зображення"><div><h3>Сауна</h3><p>Місткість, тривалість сеансу та вартість наразі не підтверджені.</p><a class="btn primary" href="#sauna-request">Забронювати сауну</a></div></article></div></div></section>
+    <section class="section request alt" id="sauna-request"><div class="wrap request-grid"><div><span class="eyebrow">Сауна</span><h2>Забронюйте сауну</h2><p class="lead">Оберіть день і зручний час. Ми передзвонимо, щоб підтвердити бронювання й розповісти про тривалість сеансу та вартість.</p><a class="request-phone" href="tel:+380673811554">+38 067 381 15 54</a></div><form class="request-form" data-hotelos data-form-name="Бронювання сауни" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Людей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата<input name="date" type="date"></label><label class="field">Час<input name="time" type="time"></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
+    <section class="section request" id="spa-request"><div class="wrap request-grid"><div><span class="eyebrow">SPA-зона</span><h2>Запишіться в SPA</h2><p class="lead">Вкажіть бажаний день і час. Ми зателефонуємо, щоб підтвердити запис і розповісти, що доступно в SPA-зоні.</p><a class="request-phone" href="tel:+380673811554">+38 067 381 15 54</a></div><form class="request-form" data-hotelos data-form-name="Запит на SPA" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Людей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата<input name="date" type="date"></label><label class="field">Час<input name="time" type="time"></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
     <section class="section parking" id="parking"><div class="wrap parking-grid"><div><span class="eyebrow">ARRIVE</span><h2>Приїжджайте автомобілем</h2><p class="lead">Для гостей підтверджене безкоштовне паркування. Точне розташування, місткість і можливість заряджання електромобіля наразі не уточнені.</p><a class="btn" style="background:#fff;border-color:#fff;color:var(--olive)" href="https://maps.app.goo.gl/zEqVs8ptxuEu2asq6" target="_blank" rel="noopener">Прокласти маршрут</a></div><div style="border-radius:12px;overflow:hidden;min-height:280px"><img src="images/parking.jpg" alt="Паркування, ілюстративне зображення"></div></div></section>
     <section class="section reception"><div class="wrap reception-grid"><div><span class="eyebrow">24/7</span><h2>На зв’язку 24/7</h2><p class="lead">Цілодобова рецепція підтверджена, зручно для гостей із різним графіком прибуття. Це не означає автоматично вільний час заселення: check-in і check-out наразі не підтверджені.</p></div><div></div></div></section>
     <section class="section day"><div class="wrap"><span class="eyebrow">One-day story</span><h2>Один день у «Тарас Бульба»</h2><div class="day-grid"><article class="day-step"><b>Ранок</b><span>Сніданок.</span></article><article class="day-step"><b>День</b><span>Кам’янець.</span></article><article class="day-step"><b>Вечір</b><span>Українська кухня.</span></article><article class="day-step"><b>Після вечері</b><span>Сауна або SPA.</span></article><article class="day-step"><b>Ніч</b><span>Комфортний номер.</span></article></div></div></section>
@@ -124,10 +137,11 @@
     <section class="section" id="gallery"><div class="wrap"><span class="eyebrow">Gallery</span><h2>Побачте «Тарас Бульба»</h2><div class="gallery"><figure><img src="images/hero.jpg" alt="Ілюстративний вигляд готелю" loading="lazy"></figure><figure><img src="images/cuisine.jpg" alt="Ілюстративна українська кухня" loading="lazy"></figure><figure><img src="images/sauna.jpg" alt="Ілюстративна сауна" loading="lazy"></figure><figure><img src="images/room-a.jpg" alt="Ілюстративний номер" loading="lazy"></figure></div><p class="gallery-note">Зображення поки ілюстративні. Реальні фото номерів, ресторану, SPA/сауни та живої музики буде додано після зйомки на місці.</p></div></section>
     <section class="section rating-section"><span class="eyebrow">Guest rating</span><h2 style="font:700 clamp(1.8rem,3.5vw,2.6rem)/1.1 var(--serif);margin:.2em 0">Актуальна оцінка на Booking.com</h2><div class="rating-badge"><b>9.5</b><span>з 10</span></div><div class="rating-count">На основі 1101 відгуку на Booking.com</div><p class="rating-fine">Актуальну оцінку та відгуки дивіться на сторінці готелю на Booking.com.</p></section>
     <section class="section booking" id="booking"><div class="wrap"><span class="eyebrow">Contacts</span><h2>Зв’яжіться з нами</h2><p class="lead">Щоб забронювати номер або столик, зателефонуйте нам напряму, ми уточнимо наявність і деталі.</p><div class="contact-card" style="max-width:520px;margin:40px auto 0;text-align:center"><a class="big" href="tel:+380673811554">+38 067 381 15 54</a><dl><dt>Адреса</dt><dd>вул. Старобульварна, 6, Кам’янець-Подільський</dd></dl><a class="btn gold" href="https://maps.app.goo.gl/J9KLxGqkPsQFtcDe9" target="_blank" rel="noopener">Відкрити у Google Maps ↗</a></div></div></section>
-    <section class="final"><div><span class="eyebrow" style="color:#e6c483">Stay · Dine · Relax</span><h2>Залишайтеся на вечерю. Залишайтеся на ніч.</h2><p>Українська кухня, SPA-відпочинок і комфортне проживання у «Тарас Бульба».</p><div class="actions"><a class="btn primary" href="#booking">Забронювати номер</a><a class="btn gold" href="#booking">Забронювати столик</a></div><small>Booking.com · 9,5 / 10 · 1101 відгук</small></div></section>
+    <section class="section request" id="stay-request"><div class="wrap request-grid"><div><span class="eyebrow">Запит на проживання</span><h2>Залиште номер, ми передзвонимо</h2><p class="lead">Вкажіть телефон і, за бажанням, дати поїздки. Адміністратор зателефонує, щоб уточнити доступність і вартість номера.</p><a class="request-phone" href="tel:+380673811554">+38 067 381 15 54</a></div><form class="request-form" data-hotelos data-form-name="Запит на проживання" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date"><span data-error-for="checkOut"></span></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
+    <section class="final"><div><span class="eyebrow" style="color:#e6c483">Stay · Dine · Relax</span><h2>Залишайтеся на вечерю. Залишайтеся на ніч.</h2><p>Українська кухня, SPA-відпочинок і комфортне проживання у «Тарас Бульба».</p><div class="actions"><a class="btn primary" href="#stay-request">Забронювати номер</a><a class="btn gold" href="#booking">Забронювати столик</a></div><small>Booking.com · 9,5 / 10 · 1101 відгук</small></div></section>
   </main>
   <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>ТАРАС БУЛЬБА</strong><small>Готель · Ресторан · Кам’янець-Подільський</small></div><div class="footer-col"><b>Проживання</b><a href="#rooms">Номери</a><a href="#booking">Бронювання</a><a href="#breakfast">Сніданок</a></div><div class="footer-col"><b>Кухня</b><a href="#dine">Ресторан</a><a href="#dine">Українська кухня</a><a href="#dine">Бар</a></div><div class="footer-col"><b>Відпочинок</b><a href="#wellness">SPA</a><a href="#wellness">Сауна</a></div><div class="footer-col"><b>Дозвілля</b><a href="#music">Жива музика</a><a href="#gallery">Галерея</a></div><div class="footer-col"><b>Інформація</b><a href="#parking">Парковка</a><a href="#contacts">Карта</a><a href="#contacts">Контакти</a></div></div><div class="footer-bottom"><span>вул. Старобульварна, 6 · Кам’янець-Подільський</span><span>+38 067 381 15 54</span></div></div></footer>
-  <div class="mobile-sticky"><a href="#booking">Номер</a><a href="#booking">Столик</a><a href="tel:+380673811554">Подзвонити</a></div>
+  <div class="mobile-sticky"><a href="#stay-request">Номер</a><a href="#booking">Столик</a><a href="tel:+380673811554">Подзвонити</a></div>
   <script>
     const observer=new IntersectionObserver(entries=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});document.querySelectorAll('.reveal,.reveal-group').forEach(el=>observer.observe(el));
     const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -141,5 +155,152 @@
       }
     }
   </script>
+<script type="module">
+// HotelOS site forms. Paste this whole block into the site's index.html as an inline module
+// script right before the closing body tag, and set the three constants below. Never put a
+// literal closing script tag inside this file: it would end the inline script early.
+// Contract (hotelos.webart.work/CRM.md → Submission data contract, firestore.rules):
+// - every form is <form data-hotelos data-form-name="…" novalidate> inside a <section id="{formId}">;
+//   the section id IS the formId (stable slug, e.g. stay-request, sauna-request) and the CRM
+//   links to SITE + '#' + formId, so the link scrolls to the start of that section;
+// - fields are matched by name: phone (required), name, email, message, checkIn, checkOut, guests,
+//   roomType, date, time, service; a [data-genders] box renders one select per guest (hostels);
+// - errors go to [data-error-for="<name>"], the result to [data-status]; `website` is a honeypot.
+const HOTEL_ID = 'kp-tarasbulba'; // Firestore hotels/{id}: 'kp-' + site folder name
+const SITE = 'https://tarasbulba.webart.work/'; // from the site's CNAME
+const PHONE = '+38 067 381 15 54'; // shown when sending fails
+
+const FIREBASE = {
+	apiKey: 'AIzaSyBeSB5EuC4BBSpmCGA3Pjk7dD_JV2SdcSQ',
+	authDomain: 'hotel-upwork.firebaseapp.com',
+	projectId: 'hotel-upwork',
+	appId: '1:40129364672:web:c9659550ebf0f1d8a36325',
+};
+const SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const TEXT_FIELDS = ['name', 'email', 'message', 'checkIn', 'checkOut', 'date', 'time', 'roomType', 'service'];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+let db;
+async function firestore() {
+	if (db) return db;
+	// Loaded on first submit only, so the page itself stays light.
+	const [{ initializeApp }, lite] = await Promise.all([import(SDK + 'firebase-app.js'), import(SDK + 'firebase-firestore-lite.js')]);
+	db = { lite, store: lite.getFirestore(initializeApp(FIREBASE)) };
+	return db;
+}
+
+function setup(form) {
+	const formId = form.closest('section[id]')?.id;
+	if (!formId) return console.error('HotelOS form needs a parent <section id="formId">', form);
+	const field = (name) => form.elements.namedItem(name);
+	const statusEl = form.querySelector('[data-status]');
+	const submit = form.querySelector('[type=submit]');
+	const submitLabel = submit.textContent;
+	const gendersBox = form.querySelector('[data-genders]');
+
+	for (const name of ['checkIn', 'checkOut', 'date']) if (field(name)) field(name).min = today;
+	if (field('checkIn') && field('checkOut')) {
+		field('checkIn').addEventListener('change', () => {
+			const checkIn = field('checkIn').value;
+			field('checkOut').min = checkIn || today;
+			if (field('checkOut').value && field('checkOut').value <= checkIn) field('checkOut').value = '';
+		});
+	}
+
+	// Hostels: one gender select per guest, kept in sync with the guests count.
+	function renderGenders() {
+		if (!gendersBox) return;
+		const count = Math.min(Math.max(parseInt(field('guests')?.value, 10) || 1, 1), 20);
+		const current = [...gendersBox.querySelectorAll('select')].map((select) => select.value);
+		gendersBox.replaceChildren(
+			...Array.from({ length: count }, (_, i) => {
+				const label = document.createElement('label');
+				label.textContent = `Гість ${i + 1}`;
+				const select = document.createElement('select');
+				select.name = 'gender';
+				select.required = true;
+				select.innerHTML = '<option value="">Стать</option><option value="female">Жінка</option><option value="male">Чоловік</option>';
+				select.value = current[i] ?? '';
+				label.append(select);
+				return label;
+			}),
+		);
+	}
+	if (gendersBox) {
+		field('guests')?.addEventListener('input', renderGenders);
+		renderGenders();
+	}
+
+	function setError(name, text) {
+		const input = field(name);
+		if (input instanceof Element) input.setAttribute('aria-invalid', text ? 'true' : 'false');
+		const slot = form.querySelector(`[data-error-for="${name}"]`);
+		if (slot) slot.textContent = text;
+	}
+
+	function showStatus(state, html) {
+		statusEl.dataset.state = state;
+		statusEl.innerHTML = html;
+	}
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		showStatus('', '');
+		const phone = field('phone').value.trim();
+		const digits = phone.replace(/\D/g, '');
+		setError('phone', digits.length < 9 || digits.length > 15 ? 'Вкажіть номер телефону, щоб ми могли передзвонити.' : '');
+		if (field('checkIn') && field('checkOut')) {
+			const { value: checkIn } = field('checkIn');
+			const { value: checkOut } = field('checkOut');
+			setError('checkOut', checkIn && checkOut && checkOut <= checkIn ? 'Дата виїзду має бути пізніше за дату заїзду.' : '');
+		}
+		const genderSelects = gendersBox ? [...gendersBox.querySelectorAll('select')] : [];
+		if (gendersBox) {
+			const missing = genderSelects.some((select) => !select.value);
+			for (const select of genderSelects) select.setAttribute('aria-invalid', missing && !select.value ? 'true' : 'false');
+			const slot = form.querySelector('[data-error-for="genders"]');
+			if (slot) slot.textContent = missing ? 'Вкажіть стать кожного гостя, щоб ми підібрали місця.' : '';
+		}
+		const invalid = form.querySelector('[aria-invalid=true]');
+		if (invalid) return invalid.focus();
+
+		const thanks = `Дякуємо! Ми зателефонуємо на ${phone.replace(/</g, '')} найближчим часом.`;
+		// Bots fill the hidden field: pretend success, send nothing.
+		if (field('website')?.value) {
+			form.reset();
+			renderGenders();
+			return showStatus('ok', thanks);
+		}
+
+		const lead = { phone, formId, formName: form.dataset.formName, site: SITE, hotelId: HOTEL_ID };
+		for (const name of TEXT_FIELDS) {
+			const value = field(name)?.value?.trim();
+			if (value) lead[name] = value;
+		}
+		const guests = parseInt(field('guests')?.value, 10);
+		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
+
+		submit.disabled = true;
+		submit.textContent = 'Надсилаємо…';
+		try {
+			const { lite, store } = await firestore();
+			await lite.addDoc(lite.collection(store, 'submissions'), { ...lead, status: 'new', history: [], createdAt: lite.serverTimestamp() });
+			form.reset();
+			if (field('checkOut')) field('checkOut').min = today;
+			renderGenders();
+			showStatus('ok', thanks);
+		} catch (error) {
+			console.error(error);
+			showStatus('error', `Не вдалося надіслати запит. Зателефонуйте нам: <a href="tel:${PHONE.replace(/[^\d+]/g, '')}">${PHONE}</a>.`);
+		} finally {
+			submit.disabled = false;
+			submit.textContent = submitLabel;
+		}
+	});
+}
+
+document.querySelectorAll('form[data-hotelos]').forEach(setup);
+</script>
 </body>
 </html>

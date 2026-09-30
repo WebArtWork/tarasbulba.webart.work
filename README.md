@@ -23,3 +23,6 @@ Live site: https://tarasbulba.webart.work
 
 ## Notes
 The page explicitly flags several details as unverified: room categories/capacity/pricing, breakfast format and hours, SPA equipment and treatment list, sauna capacity/duration/price, check-in/check-out times, exact parking location and capacity, and email/website/Instagram contacts. All photos on the site are marked as illustrative rather than real photos of the property.
+
+## Forms
+Forms post to HotelOS (hotel `kp-tarasbulba`): `sauna-request` and `spa-request` (after the SPA/sauna section) and `stay-request` (before the final CTA). Phone is the only required field. No event form: private events are only mentioned as a scenario, not a verified service.
